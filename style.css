@@ -1,0 +1,384 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ff6000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* Ana Sayfa - Hero Bölümü */
+.hero {
+    background-color: #001f3f;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero .button {
+    background-color: white;
+    color: #ff6000;
+    padding: 12px 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero .button:hover {
+    background-color: #ffe1cc;
+}
+
+/* Ana Sayfa - Hizmet Kartları */
+.hizmetler {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.hizmetler h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ürünler Sayfası */
+.urunler {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.urunler h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.urun-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.urun {
+    background-color: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.urun img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.urun h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.urun p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Kampanyalar Sayfası */
+.kampanyalar {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.kampanyalar h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.kampanya-listesi {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.kampanya {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kampanya img {
+    width: 200px;
+    object-fit: cover;
+}
+
+.kampanya div {
+    padding: 20px;
+    text-align: left;
+}
+
+.kampanya h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.kampanya p {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .kampanya {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .kampanya img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* İletişim Sayfası */
+.iletisim {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.iletisim h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.iletisim-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.iletisim-form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.iletisim-form input,
+.iletisim-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.iletisim-form button {
+    background-color: #ff6000;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.iletisim-form button:hover {
+    background-color: #e05300;
+}
+
+/* Teşekkürler Sayfası */
+.tesekkurler {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.tesekkurler h1 {
+    font-size: 36px;
+    color: #ff6000;
+    margin-bottom: 20px;
+}
+
+.tesekkurler p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.tesekkurler .button {
+    background-color: #ff6000;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tesekkurler .button:hover {
+    background-color: #e05300;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Navigation ve Grid */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .cards,
+    .urun-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+    .urun-karti {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.urun-karti img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.urun-karti h3 {
+  margin: 10px 0;
+}
+
+}
+.urun-karti button,
+.sepet button {
+  background: linear-gradient(135deg, #ff6000, #ff8000);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.urun-karti button:hover,
+.sepet button:hover {
+  background: linear-gradient(135deg, #ff8000, #ffa64d);
+  transform: scale(1.05);
+}
+
+.fiyat {
+  color: #ff6000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.eski-fiyat {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.indirimli-fiyat {
+  color: #ff6000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teknosa | Ürünler</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/teknosa-logoa.jpg" alt="Teknosa Logo"/>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="urunler.html" class="active">Ürünler</a></li>
+        <li><a href="kampanyalar.html">Kampanyalar</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li><a href="sepet.html">Sepet</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="urunler">
+    <h1>Ürünlerimiz</h1>
+    <div class="urun-grid">
+      <div class="urun">
+        <img src="images/urun1.jpg" alt="iPhone 14 Pro">
+        <h3>iPhone 14 Pro</h3>
+        <p>256GB, OLED Ekran</p>
+        <p class="eski-fiyat">₺49.999</p>
+        <p class="indirimli-fiyat">₺44.999 🔥</p>
+        <button onclick="sepeteEkle('iPhone 14 Pro')">Sepete Ekle</button>
+      </div>
+
+      <div class="urun">
+        <img src="images/urun2.jpg" alt="Gaming Laptop">
+        <h3>Gaming Laptop</h3>
+        <p>RTX 4060, 1TB SSD</p>
+        <p class="eski-fiyat">₺32.500</p>
+        <p class="indirimli-fiyat">₺26.000 🔥</p>
+        <button onclick="sepeteEkle('Gaming Laptop')">Sepete Ekle</button>
+      </div>
+
+      <div class="urun">
+        <img src="images/urun3.jpg" alt="Samsung TV">
+        <h3>Samsung 4K TV</h3>
+        <p>55\", Smart TV</p>
+        <p class="eski-fiyat">₺21.999</p>
+        <p class="indirimli-fiyat">₺15.399 🔥</p>
+        <button onclick="sepeteEkle('Samsung 4K TV')">Sepete Ekle</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Teknosa. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    function sepeteEkle(urunAdi) {
+      let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
+      sepet.push(urunAdi);
+      localStorage.setItem("sepet", JSON.stringify(sepet));
+      alert(`${urunAdi} sepete eklendi!`);
+    }
+  </script>
+</body>
+</html>
